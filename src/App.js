@@ -4,6 +4,17 @@ import Inp from "./components/Inp";
 import Pilayout from "./components/Pilayout";
 
 function App() {
+  var [check, setCheck] = useState(false);
+  var onCheck = (e) => {
+    if (check === false) {
+      setCheck(true);
+      console.log("checked");
+    } else {
+      setCheck(true);
+      console.log("unchecked");
+    }
+    console.log(e.target.value);
+  };
   return (
     <div className="App">
       <header className="App-header">
@@ -24,7 +35,7 @@ function App() {
           <Pilayout />
         </div>
       </header>
-      <Inp />
+      <Inp check={check} change={onCheck} />
     </div>
   );
 }

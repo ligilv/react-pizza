@@ -1,6 +1,6 @@
 import React from "react";
 
-function Inp() {
+function Inp({ change, check }) {
   return (
     <div>
       <form>
@@ -10,32 +10,62 @@ function Inp() {
         </label>
         <br></br>
         <label>
-          <input type="checkbox" value="Basecheese" />
+          <input
+            type="checkbox"
+            value="Basecheese"
+            defaultChecked={check}
+            onClick={change}
+          />
           Basecheese
         </label>
         <br></br>
         <label>
-          <input type="checkbox" value="Basil" />
+          <input
+            type="checkbox"
+            defaultChecked={check}
+            value="Basil"
+            onClick={change}
+          />
           Basil
         </label>
         <br></br>
         <label>
-          <input type="checkbox" value="Mushroom" />
+          <input
+            type="checkbox"
+            defaultChecked={check}
+            value="Mushroom"
+            onClick={change}
+          />
           Mushroom
         </label>
         <br></br>
         <label>
-          <input type="checkbox" value="Olive" />
+          <input
+            type="checkbox"
+            defaultChecked={check}
+            value="Olive"
+            onClick={change}
+          />
           Olive
         </label>
         <br></br>
         <label>
-          <input type="checkbox" value="Pineapple" />
+          <input
+            type="checkbox"
+            defaultChecked={check}
+            value="Pineapple"
+            onClick={change}
+          />
           Pineapple
         </label>
         <br></br>
         <label>
-          <input type="checkbox" value="Tomato" />
+          <input
+            type="checkbox"
+            defaultChecked={check}
+            value="Tomato"
+            onClick={change}
+          />
           Tomato
         </label>
         <br></br>
