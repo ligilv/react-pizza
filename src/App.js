@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
+import Inp from "./components/Inp";
 import Pilayout from "./components/Pilayout";
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
             color: "white",
           }}
         >
-          PIZAA maker
+          PIZZA MAKER
         </div>
         <div
           className="pizzamaker"
@@ -23,6 +24,7 @@ function App() {
           <Pilayout />
         </div>
       </header>
+      <Inp />
     </div>
   );
 }
