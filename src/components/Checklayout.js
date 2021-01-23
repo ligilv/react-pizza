@@ -1,14 +1,15 @@
-import React from "react";
-//this file sets how a checkbox behave
-function Inp({ changeIM, check }) {
-
+import React, { useState } from "react";
+//this file sets how a imagechangebox behave
+function imagechangeLayout({ imagechange, checkb }) {
   return (
     <div>
       <label>
         PizzaBase
         <input
+          onChange={checkb}
           type="checkbox"
-          defaultChecked={true}
+          defaultimagechangeed={true}
+          checked={true}
           value="PizzaBase"
           name="PizzaBase"
           id="PizzaBase"
@@ -20,8 +21,8 @@ function Inp({ changeIM, check }) {
         <input
           type="checkbox"
           value="Basecheese"
-          defaultChecked={check}
-          onClick={changeIM}
+          defaultimagechangeed={imagechange.Basecheese}
+          onChange={checkb}
         />
       </label>
       <br></br>
@@ -29,9 +30,9 @@ function Inp({ changeIM, check }) {
         Basil
         <input
           type="checkbox"
-          defaultChecked={check}
+          defaultimagechangeed={imagechange}
           value="Basil"
-          onClick={changeIM}
+          onChange={checkb}
           name="Basil"
           id="Basil"
         />
@@ -41,9 +42,9 @@ function Inp({ changeIM, check }) {
         Mushroom
         <input
           type="checkbox"
-          defaultChecked={check}
+          defaultimagechangeed={imagechange}
           value="Mushroom"
-          onClick={changeIM}
+          onChange={checkb}
           name="Mushroom"
           id="Mushroom"
         />
@@ -53,9 +54,9 @@ function Inp({ changeIM, check }) {
         Olive
         <input
           type="checkbox"
-          defaultChecked={check}
+          defaultimagechangeed={imagechange}
           value="Olive"
-          onClick={changeIM}
+          onChange={checkb}
           name="Olive"
           id="Olive"
         />
@@ -65,9 +66,9 @@ function Inp({ changeIM, check }) {
         Pineapple
         <input
           type="checkbox"
-          defaultChecked={check}
+          defaultimagechangeed={imagechange}
           value="Pineapple"
-          onClick={changeIM}
+          onChange={checkb}
           name="Pineapple"
           id="Pineapple"
         />
@@ -77,9 +78,9 @@ function Inp({ changeIM, check }) {
         Tomato
         <input
           type="checkbox"
-          defaultChecked={check}
+          defaultimagechangeed={imagechange}
           value="Tomato"
-          onClick={changeIM}
+          onChange={checkb}
           name="Tomato"
           id="Tomato"
         />
@@ -89,4 +90,4 @@ function Inp({ changeIM, check }) {
   );
 }
 
-export default Inp;
+export default imagechangeLayout;

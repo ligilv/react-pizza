@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
-import Inp from "./components/Inp";
-import Pilayout from "./components/Pilayout";
+import Checklayout from "./components/Checklayout";
+import Piclayout from "./components/Piclayout";
 
 function App() {
-  var [check, setCheck] = useState(false);
-  var [name, setname] = useState("");
-  const [imgchnge, setImgchnge] = useState({
+  const [imagechange, setimagechange] = useState({
     Basecheese: false,
     Basil: false,
     Mushroom: false,
@@ -14,25 +12,40 @@ function App() {
     Pineapple: false,
     Tomato: false,
   }); //for image
-
   var onCheck = (e) => {
-    setname(e.target.value);
-    if (check === false) {
-      setCheck(true);
-      setname(e.target.value);
-      setImgchnge({ ...imgchnge, ...(imgchnge[name] = true) });
+    setimagechange({
+      ...imagechange,
+      [e.target.value]: !!e.target.checked,
+    });
 
-      console.log(imgchnge);
-      console.log("checked and block");
-    } else {
-      setCheck(true);
-      console.log("unchecked and none");
-      setImgchnge({ ...imgchnge, ...(imgchnge[name] = false) });
-      console.log(imgchnge);
-      setCheck(!check);
-      console.log(e.target.value);
-    }
+    console.log(e.target.value + "is" + imagechange[e.target.value]);
+    console.log(imagechange);
+    ///Finally all I have to do was remove if else statemt
+
+    //glad learned so much regarding spread operators and specially passing functions and state to child componenst
+
+    // This below is what was causing all error
+
+    //   if (e.target.checked ===true) {
+    //     setimagechange({
+    //       ...imagechange,
+    //       [e.target.value]: !!e.target.checked,
+    //     });
+
+    //     console.log(e.target.value + "is" + imagechange[e.target.value]);
+    //     console.log(imagechange);
+    //   } else {
+    //     setimagechange({
+    //       ...imagechange,
+    //       [e.target.value]: !e.target.checked,
+    //     });
+    //     setimagechange(!e.target.checked);
+    //     console.log(e.target.value + "istttt" + imagechange[e.target.value]);
+
+    //     console.log(imagechange);
+    //   }
   };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -47,10 +60,10 @@ function App() {
           PIZZA MAKER
         </div>
         <div style={{ background: "grey", width: "500px", height: "500px" }}>
-          <Pilayout name={name} imgchnge={imgchnge} />
+          <Piclayout imagechange={imagechange} />
         </div>
       </header>
-      <Inp check={check} changeIM={onCheck} />
+      <Checklayout imagechange={imagechange} checkb={onCheck} />
     </div>
   );
 }

@@ -9,7 +9,7 @@ import Pineapple from "../assets/Pineapple.png";
 import PizzaBase from "../assets/PizzaBase.png";
 import Tomato from "../assets/Tomato.png";
 //this layout shos the images and their properties
-export default function Pilayout({ imgchnge, name }) {
+export default function Piclayout({ imagechange }) {
   return (
     <div style={{ width: "100%", background: "blue" }}>
       <div style={{ position: "relative" }}>
@@ -24,7 +24,7 @@ export default function Pilayout({ imgchnge, name }) {
         <img
           className="Basecheese"
           style={{
-            display: imgchnge ? "block" : "none",
+            display: imagechange.Basecheese ? "block" : "none",
             border: "2px red solid",
             position: "absolute",
           }}
@@ -36,7 +36,7 @@ export default function Pilayout({ imgchnge, name }) {
         <img
           className="Basil"
           style={{
-            display: imgchnge ? "block" : "none",
+            display: imagechange.Basil ? "block" : "none",
             border: "2px red solid",
             position: "absolute",
           }}
@@ -48,7 +48,7 @@ export default function Pilayout({ imgchnge, name }) {
         <img
           className="Mushroom"
           style={{
-            display: imgchnge ? "block" : "none",
+            display: imagechange.Mushroom ? "block" : "none",
             border: "2px red solid",
             position: "absolute",
           }}
@@ -60,7 +60,7 @@ export default function Pilayout({ imgchnge, name }) {
         <img
           className="Olive"
           style={{
-            display: imgchnge ? "block" : "none",
+            display: imagechange.Olive ? "block" : "none",
             border: "2px red solid",
             position: "absolute",
           }}
@@ -72,7 +72,7 @@ export default function Pilayout({ imgchnge, name }) {
         <img
           className="Pineapple"
           style={{
-            display: imgchnge ? "block" : "none",
+            display: imagechange.Pineapple ? "block" : "none",
             border: "2px red solid",
             position: "absolute",
           }}
@@ -84,7 +84,7 @@ export default function Pilayout({ imgchnge, name }) {
         <img
           className="Tomato"
           style={{
-            display: imgchnge ? "block" : "none",
+            display: imagechange.Tomato ? "block" : "none",
             border: "2px red solid",
             position: "absolute",
           }}
